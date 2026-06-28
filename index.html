@@ -148,7 +148,9 @@
             document.querySelectorAll('.main-page-section').forEach(section => section.classList.add('hidden'));
             // Reveal targets
             document.getElementById(`page-${pageId}`).classList.remove('hidden');
-            
+            if (pageId === 'home') {
+                activateHouseView(1);
+            }
             // Clean active links styling status
             ['home', 'about', 'search', 'contact'].forEach(id => {
                 const link = document.getElementById(`nav-${id}`);
