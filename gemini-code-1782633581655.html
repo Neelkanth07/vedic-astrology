@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Astrology: The 12 Bhavas Comprehensive Guide</title>
+    <!-- Tailwind CSS for modern responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Pictographic Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+        .font-serif-vedic { font-family: 'Cinzel', serif; }
+        .font-sans-vedic { font-family: 'Inter', sans-serif; }
+        .gold-gradient { background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%); }
+        .border-gold { border-image: linear-gradient(to right, #bf953f, #fcf6ba, #aa771c) 1; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 font-sans-vedic dynamic-bhava-page">
+
+    <!-- HEADER -->
+    <header class="bg-stone-900 text-white py-12 text-center border-b-4 border-amber-600 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <h1 class="font-serif-vedic text-4xl md:text-5xl tracking-widest text-amber-400 mb-2">THE 12 BHAVAS IN VEDIC ASTROLOGY</h1>
+        <p class="text-stone-400 italic max-w-2xl mx-auto px-4 text-sm md:text-base">
+            An interactive cosmic map modeled after the structural framework of the Shashta Bhava reference chart.
+        </p>
+    </header>
+
+    <!-- HOUSE SELECTOR NAVIGATION -->
+    <section class="max-w-7xl mx-auto px-4 my-8">
+        <h2 class="font-serif-vedic text-center text-xl mb-4 text-stone-700">Select a Bhava (House) to Explore</h2>
+        <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 text-center" id="house-tabs">
+            <!-- Dynamically generated navigation buttons -->
+        </div>
+    </section>
+
+    <!-- MAIN DYNAMIC CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 mb-16">
+        <div id="bhava-card-container" class="bg-white rounded-lg shadow-xl border border-stone-200 overflow-hidden transition-all duration-300">
+            <!-- Content injects here via Javascript -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-xs md:text-sm border-t border-stone-800">
+        <p class="font-serif-vedic text-amber-500 mb-2">"The stars impel, they do not compel."</p>
+        <p>&copy; 2026 Cosmic Astrology Dashboard. Designed following the structural paradigms of traditional Vedic charts.</p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT & DATABASE -->
+    <script>
+        // Complete structural dataset mapping all 12 houses mimicking the reference image parameters
+        const bhavaData = {
+            1: {
+                title: "THE FIRST HOUSE",
+                sub: "Lagna Bhava — House of Self, Identity, and Expression",
+                essence: "The First House is the cornerstone of the birth chart. It represents your physical body, facial features, overall vitality, persona, and the initial lens through which you view the entire world.",
+                nature: ["Kendra House (1/4/7/10)", "Trikona House (1/5/9)", "Dharma Bhava (Duty/Righteousness)", "Represents the dawn of consciousness"],
+                themes: [
+                    { icon: "fa-user-astronaut", label: "Self & Persona" },
+                    { icon: "fa-heart-pulse", label: "Vitality & Health" },
+                    { icon: "fa-seedling", label: "New Beginnings" },
+                    { icon: "fa-face-smile", label: "Physical Outlook" }
+                ],
+                significations: ["Character & temperament", "Head and brain areas", "Early childhood environment", "Bodily strength and constitution", "Self-reliance and ego"],
+                planets: "Sun gives massive leadership vitality here. Moon provides high sensitivity and emotional projection. Saturn may cause initial self-doubt but grants ultimate longevity and resilience.",
+                quote: "The First House is the seed from which the entire tree of life emerges."
+            },
+            2: {
+                title: "THE SECOND HOUSE",
+                sub: "Dhana Bhava — House of Wealth, Family, and Speech",
+                essence: "The Second House dictates what you accumulate, your values, resources, immediate family background, and the power of your spoken word.",
+                nature: ["Panapharo House (Succeedent)", "Artha Bhava (Wealth/Material)", "Governs early values and lineage"],
+                themes: [
+                    { icon: "fa-wallet", label: "Accumulated Wealth" },
+                    { icon: "fa-users-viewfinder", label: "Lineage & Family" },
+                    { icon: "fa-comments", label: "Speech & Expression" },
+                    { icon: "fa-apple-whole", label: "Diet & Intake" }
+                ],
+                significations: ["Liquid assets and bank balance", "Face, eyes, and throat structures", "Primary education from family", "Truthfulness and speech clarity"],
+                planets: "Jupiter or Venus here brings speech eloquence and material abundance. Rahu can induce unpredictable financial swings and unusual eating patterns.",
+                quote: "Your speech is the mirror of your accumulated soul values."
+            },
+            3: {
+                title: "THE THIRD HOUSE",
+                sub: "Sahaja Bhava — House of Courage, Skill, and Communication",
+                essence: "The Third House represents your willpower, younger siblings, short travels, manual skills, and all forms of communications and self-expression.",
+                nature: ["Apoklima House (Cadent)", "Upachaya House (Growth through effort)", "Kama Bhava (Desire/Interactions)"],
+                themes: [
+                    { icon: "fa-hand-fist", label: "Courage & Valor" },
+                    { icon: "fa-pen-nib", label: "Writing & Media" },
+                    { icon: "fa-people-arrows", label: "Siblings & Peers" },
+                    { icon: "fa-route", label: "Short Journeys" }
+                ],
+                significations: ["Hands, arms, and respiratory tract", "Initiative and enterprise capacity", "Hobbies, arts, and crafts", "Digital communication and messaging"],
+                planets: "Malefics like Mars or Sun excel here, giving raw courage and unstoppable competitive willpower. Mercury provides superb writing and editing talents.",
+                quote: "True strength is not the absence of fear, but the resolve to push forward despite it."
+            },
+            4: {
+                title: "THE FOURTH HOUSE",
+                sub: "Bandhu Bhava — House of Mother, Home, and Happiness",
+                essence: "The Fourth House represents your emotional foundations, inner peace, maternal connection, landed property, real estate, and your place of domestic comfort.",
+                nature: ["Kendra House (1/4/7/10)", "Moksha Bhava (Liberation/Peace)", "Seat of the subconscious emotional state"],
+                themes: [
+                    { icon: "fa-house-chimney", label: "Home & Stability" },
+                    { icon: "fa-person-breastfeeding", label: "Maternal Bond" },
+                    { icon: "fa-car", label: "Vehicles & Assets" },
+                    { icon: "fa-brain", label: "Mental Peace" }
+                ],
+                significations: ["Chest, heart, and lungs", "Real estate, land, and farming", "Private life behind closed doors", "Deep emotional security baselines"],
+                planets: "Moon and Venus are deeply comfortable here, offering rich domestic joy and peaceful vehicles. Rahu may cause geographical displacements or a restless mind.",
+                quote: "External kingdoms mean nothing if the inner sanctuary of the mind is at war."
+            },
+            5: {
+                title: "THE FIFTH HOUSE",
+                sub: "Putra Bhava — House of Creativity, Intelligence, and Offspring",
+                essence: "The Fifth House shines light on your purva-punya (past life credit), creative outputs, children, ancient knowledge, romance, and speculative intellectual games.",
+                nature: ["Trikona House (1/5/9)", "Dharma Bhava (Righteous Expression)", "House of sudden merits and luck"],
+                themes: [
+                    { icon: "fa-lightbulb", label: "Intellect & Wisdom" },
+                    { icon: "fa-child", label: "Children & Offspring" },
+                    { icon: "fa-palette", label: "Creative Arts" },
+                    { icon: "fa-arrow-trend-up", label: "Speculation/Stocks" }
+                ],
+                significations: ["Stomach and digestive health", "Mantra siddhi and spiritual devotion", "Romantic relationships", "Advisory capabilities and counseling roles"],
+                planets: "Jupiter thrives here, expanding wisdom and offering noble progeny. Mercury sharpens mathematical and analytical abilities for financial speculation.",
+                quote: "Creativity is the divine spark of past life merits finding expression in the present."
+            },
+            6: {
+                title: "THE SIXTH HOUSE",
+                sub: "Shashta Bhava — House of Service, Struggle, and Victory",
+                essence: "The Sixth House is the battlefield of karma. It represents obstacles we must overcome, daily jobs, debts, litigation, health conditions, and strength built through pure perseverance.",
+                nature: ["Dusthana House (6/8/12 - Challenging)", "Upachaya House (3/6/10/11 - Growing)", "Artha Bhava (Workplace Dynamics)"],
+                themes: [
+                    { icon: "fa-shield-halved", label: "Protection & Defense" },
+                    { icon: "fa-person-digging", label: "Struggle & Effort" },
+                    { icon: "fa-gear", label: "Discipline & Routine" },
+                    { icon: "fa-briefcase-medical", label: "Health & Healing" }
+                ],
+                significations: ["Enemies, competitors, and rivals", "Debts, financial trials, litigation", "Subordinates, pet care, daily work duties", "Immune health responses"],
+                planets: "Mars and Saturn shine by suppressing adversaries and bringing systemized order. Benefics here might feel overwhelmed by competitive or cutthroat dynamics.",
+                quote: "The Sixth House does not give comfort — it gives strength. It does not remove problems — it gives the power to conquer them."
+            },
+            7: {
+                title: "THE SEVENTH HOUSE",
+                sub: "Yuvati Bhava — House of Partnerships, Marriage, and Public Relations",
+                essence: "The Seventh House is the mirror of the self. Sitting directly opposite the first house, it regulates serious marriages, business partners, legal agreements, and public foreign trade.",
+                nature: ["Kendra House (1/4/7/10)", "Kama Bhava (Desire/Social Frameworks)", "Maraka Bhava (Influential transition house)"],
+                themes: [
+                    { icon: "fa-ring", label: "Marriage & Union" },
+                    { icon: "fa-handshake", label: "Business Alliances" },
+                    { icon: "fa-users", label: "Public Interactions" },
+                    { icon: "fa-scale-balanced", label: "Legal Treaties" }
+                ],
+                significations: ["Spouse's persona and temperament", "Lower abdomen and kidney regions", "Open marketplaces and trade routes", "Reflective self-discoveries through others"],
+                planets: "Venus brings deep romance and harmony. Saturn here gives a mature, committed, duty-bound spouse, though sometimes indicating an initial developmental delay.",
+                quote: "Every relationship you build is an unconscious mirror reflecting hidden parts of your own identity."
+            },
+            8: {
+                title: "THE EIGHTH HOUSE",
+                sub: "Randhra Bhava — House of Transformation, Longevity, and Secrets",
+                essence: "The Eighth House is the realm of the occult, sudden transformations, hidden vulnerabilities, inheritance, tax systems, longevity, and radical structural disruptions.",
+                nature: ["Dusthana House (6/8/12)", "Moksha Bhava (Mystical breakthroughs)", "Deeply private and non-disclosed matrix"],
+                themes: [
+                    { icon: "fa-mask", label: "Unseen Secrets" },
+                    { icon: "fa-hourglass-half", label: "Longevity & Death" },
+                    { icon: "fa-bolt", label: "Sudden Changes" },
+                    { icon: "fa-vault", label: "Joint Assets/Taxes" }
+                ],
+                significations: ["Reproductive areas and structural systems", "Research, investigative journalism, esoteric occult arts", "Unearned assets, inheritance, dowries", "Chronic psychological breakthroughs"],
+                planets: "Saturn provides immense longevity when resting in this house. Ketu boosts intense psychic visions and deep esoteric wisdom, while Rahu causes deep psychological fluctuations.",
+                quote: "To be reborn in higher consciousness, the ego must willingly descend into the crucible of change."
+            },
+            9: {
+                title: "THE NINTH HOUSE",
+                sub: "Bhagya Bhava — House of Fortune, Dharma, and Higher Wisdom",
+                essence: "The Ninth House represents pure luck, higher learning, interactions with spiritual gurus, philosophy, long-distance global journeys, and your moral righteousness.",
+                nature: ["Trikona House (1/5/9)", "Dharma Bhava (Divine Purpose/Duty)", "The most auspicious house of fortune"],
+                themes: [
+                    { icon: "fa-gavel", label: "Law & Ethics" },
+                    { icon: "fa-graduation-cap", label: "Higher Education" },
+                    { icon: "fa-earth-americas", label: "Long-Distance Travel" },
+                    { icon: "fa-dharmachakra", label: "Spiritual Path" }
+                ],
+                significations: ["Thighs and hip regions", "Relationship with father and lineage teachers", "Publishing, philosophy, religious frameworks", "Inherent good fortune and graceful protection"],
+                planets: "Jupiter or Sun here brings stellar grace, exemplary moral standing, wisdom, and global publishing reach. Rahu can challenge orthodox religious belief systems.",
+                quote: "Fortune follows those whose personal actions align with the cosmic laws of righteousness."
+            },
+            10: {
+                title: "THE TENTH HOUSE",
+                sub: "Karma Bhava — House of Career, Status, and Public Authority",
+                essence: "The Tenth House dictates your public reputation, authority profile, high-ranking professional career, societal duties, and recognition from governing agencies.",
+                nature: ["Kendra House (1/4/7/10)", "Upachaya House (3/6/10/11)", "Artha Bhava (Societal Achievement Status)"],
+                themes: [
+                    { icon: "fa-award", label: "Career & Status" },
+                    { icon: "fa-building", label: "Governance/Authority" },
+                    { icon: "fa-eye", label: "Public Reputation" },
+                    { icon: "fa-ranking-star", label: "Leadership Roles" }
+                ],
+                significations: ["Knees, bones, and alignment systems", "Professional honors and promotions", "Impact on community infrastructure", "Relationship with executives and bosses"],
+                planets: "Sun or Mars attains profound Directional Strength (Dig Bala) here, generating absolute executive power, professional prestige, and natural administrative skills.",
+                quote: "Your public work is your prayer in action; let your execution show your internal mastery."
+            },
+            11: {
+                title: "THE ELEVENTH HOUSE",
+                sub: "Labha Bhava — House of Gains, Networks, and Large Aspirations",
+                essence: "The Eleventh House controls all material gains, regular cash flow streams, massive social groups, professional network associations, and your ultimate goals.",
+                nature: ["Anupachaya House (Continual growth)", "Kama Bhava (Desire Fulfillment Networks)", "Ultimate rewards collector"],
+                themes: [
+                    { icon: "fa-money-bill-trend-up", label: "Financial Gains" },
+                    { icon: "fa-diagram-project", label: "Global Networks" },
+                    { icon: "fa-bullseye", label: "Desires Fulfilled" },
+                    { icon: "fa-user-group", label: "Elder Siblings/Allies" }
+                ],
+                significations: ["Calves, ankles, and micro-circulation systems", "Profits from corporations and massive groups", "Humanitarian projects and community groups", "Avenues of alternative passive income"],
+                planets: "Any planet sitting in the 11th house thrives and brings material gains. Rahu creates massive network channels, while Jupiter expands wealth through ethical enterprises.",
+                quote: "When your personal goals align with community welfare, cosmic bounty opens its floodgates."
+            },
+            12: {
+                title: "THE TWELFTH HOUSE",
+                sub: "Vyaya Bhava — House of Loss, Isolation, and Ultimate Liberation",
+                essence: "The Twelfth House represents global expenditures, complete surrender, isolation chambers, distant foreign lands, dreamscapes, sleep health, and the final liberation of the soul.",
+                nature: ["Dusthana House (6/8/12)", "Moksha Bhava (Spiritual Release)", "The completion stage of the lifecycle"],
+                themes: [
+                    { icon: "fa-plane-departure", label: "Foreign Lands" },
+                    { icon: "fa-bed", label: "Sleep & Subconscious" },
+                    { icon: "fa-building-columns", label: "Isolation/Institutes" },
+                    { icon: "fa-om", label: "Moksha & Release" }
+                ],
+                significations: ["Feet, left eye, sleep cycles", "Monasteries, hospitals, correctional centers", "Financial expenses, charity donations", "Astral travel, spiritual surrender, ashram life"],
+                planets: "Venus excels here, bringing high luxury and deep restful sleep. Ketu facilitates profound meditation insights, helping the soul break free from karmic cycles.",
+                quote: "True freedom arrives not when you gather everything, but when you master the art of letting go."
+            }
+        };
+
+        // DOM Elements
+        const tabsContainer = document.getElementById('house-tabs');
+        const cardContainer = document.getElementById('bhava-card-container');
+
+        // Render Tabs
+        function renderTabs() {
+            for(let i = 1; i <= 12; i++) {
+                const btn = document.createElement('button');
+                btn.className = `p-3 rounded-md text-sm font-bold border transition-all duration-200 cursor-pointer text-stone-700 bg-stone-100 hover:bg-amber-100 border-stone-300`;
+                btn.id = `tab-${i}`;
+                btn.innerHTML = `<span class="block text-xs text-stone-400 font-serif-vedic">House</span> ${i}`;
+                btn.onclick = () => selectHouse(i);
+                tabsContainer.appendChild(btn);
+            }
+        }
+
+        // Display Detailed Bhava Content Dynamic Component
+        function selectHouse(houseNumber) {
+            // Manage Active States in UI
+            for(let i = 1; i <= 12; i++) {
+                const el = document.getElementById(`tab-${i}`);
+                if(i === houseNumber) {
+                    el.className = "p-3 rounded-md text-sm font-bold border transition-all duration-200 cursor-pointer bg-amber-600 text-white border-amber-700 shadow-md transform scale-105";
+                } else {
+                    el.className = "p-3 rounded-md text-sm font-bold border transition-all duration-200 cursor-pointer text-stone-700 bg-stone-100 hover:bg-amber-100 border-stone-300";
+                }
+            }
+
+            const data = bhavaData[houseNumber];
+            
+            // Build the exact visual panel mimicking the styling rules of main-qimg-378e9abb32e29a141cd808ea031fe4e4.jpg
+            cardContainer.innerHTML = `
+                <div class="p-6 bg-stone-900 border-b border-amber-700 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div>
+                        <span class="text-amber-500 font-serif-vedic uppercase tracking-widest text-xs font-semibold">Detailed House Overview</span>
+                        <h2 class="text-2xl md:text-3xl text-white font-serif-vedic tracking-wider mt-1">${data.title}</h2>
+                        <p class="text-stone-300 italic text-sm mt-1">${data.sub}</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 px-6 py-3 rounded-full bg-amber-600 text-stone-900 text-2xl font-black font-serif-vedic shadow-lg">
+                        BHAVA ${houseNumber}
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- LEFT COLUMN: ESSENCE & NATURE -->
+                    <div class="space-y-6">
+                        <div class="bg-amber-50/50 p-5 rounded-lg border border-amber-200/60">
+                            <h3 class="font-serif-vedic text-amber-800 font-bold mb-2 tracking-wide text-sm flex items-center">
+                                <i class="fa-solid fa-scroll mr-2"></i> ESSENCE
+                            </h3>
+                            <p class="text-stone-700 leading-relaxed text-sm">${data.essence}</p>
+                        </div>
+
+                        <div class="bg-stone-50 p-5 rounded-lg border border-stone-200">
+                            <h3 class="font-serif-vedic text-stone-800 font-bold mb-3 tracking-wide text-sm flex items-center">
+                                <i class="fa-solid fa-chart-pie mr-2"></i> CLASSIFICATION & NATURE
+                            </h3>
+                            <ul class="space-y-2 text-sm text-stone-600">
+                                ${data.nature.map(item => `<li class="flex items-center"><i class="fa-solid fa-circle-nodes text-amber-600 mr-2 text-xs"></i>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CENTER COLUMN: PICTOGRAPHIC KEY THEMES -->
+                    <div class="bg-stone-50 rounded-lg p-6 border border-stone-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif-vedic text-stone-800 font-bold mb-6 text-center tracking-wider text-sm">
+                                PICTOGRAPHIC KEY THEMES
+                            </h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                ${data.themes.map(theme => `
+                                    <div class="bg-white p-4 rounded-md border border-stone-200 text-center shadow-sm hover:shadow-md transition-shadow">
+                                        <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mx-auto mb-2 text-stone-900 text-lg shadow-sm">
+                                            <i class="fa-solid ${theme.icon}"></i>
+                                        </div>
+                                        <p class="text-xs font-semibold text-stone-700">${theme.label}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-white rounded-md border border-amber-200 text-center italic text-xs text-amber-900 font-medium">
+                            "${data.quote}"
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: CORE SIGNIFICATIONS & PLANETARY IMPACT -->
+                    <div class="space-y-6">
+                        <div class="bg-stone-50 p-5 rounded-lg border border-stone-200">
+                            <h3 class="font-serif-vedic text-stone-800 font-bold mb-3 tracking-wide text-sm flex items-center">
+                                <i class="fa-solid fa-list-check mr-2"></i> CORE SIGNIFICATIONS
+                            </h3>
+                            <ul class="space-y-2 text-sm text-stone-600">
+                                ${data.significations.map(sig => `<li class="flex items-start"><i class="fa-solid fa-caret-right text-amber-600 mt-1 mr-2 text-sm flex-shrink-0"></i><span>${sig}</span></li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="bg-amber-900 text-stone-100 p-5 rounded-lg shadow-inner">
+                            <h3 class="font-serif-vedic text-amber-400 font-bold mb-2 tracking-wide text-sm flex items-center">
+                                <i class="fa-solid fa-circle-dot mr-2"></i> PLANETARY INFLUENCES
+                            </h3>
+                            <p class="text-stone-300 leading-relaxed text-xs md:text-sm">${data.planets}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize App on load
+        renderTabs();
+        selectHouse(1); // Set House 1 as active default view
+    </script>
+</body>
+</html>
